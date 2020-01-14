@@ -1,0 +1,35 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+  String.prototype.toPersianDigits= function(){
+     
+        var id= ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+        return this.replace(/[0-9]/g, function(w){
+            return id[+w]
+        });
+    }
+
+    var S='2020';
+    document.getElementById("log").innerHTML = S.toPersianDigits();
+
+</script>
+<style>
+div {
+   width: 350px;
+   height: 23px;
+   float:right;
+   text-align:center;   
+   color: white;
+   font-family:Tahoma;
+   background-color:gray;
+   direction:rtl;   
+}
+</style>
+</head>
+<body>
+<div id="log" align="center"></div>
+
+
+</body>
+</html>
